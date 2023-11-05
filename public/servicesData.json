@@ -1,0 +1,65 @@
+{
+    "services": [
+      {
+        "_id": "1",
+        "service_img": "https://i.ibb.co/9WkL77N/md-naziur-rahman-R-s-U0-S6-GDm4-unsplash.jpg",
+        "service_name": "Nature Expedition",
+        "service_description": "Explore the rich history of our city with a knowledgeable local guide.",
+        "service_provider_img": "https://i.ibb.co/x1rfXgf/christian-buehner-DIt-Ylc26z-VI-unsplash.jpg",
+        "service_provider_name": "John Doe",
+        "service_area": "City Center",
+        "service_price": "$50"
+      },
+      {
+        "_id": "2",
+        "service_img": "https://i.ibb.co/VC2CJfC/s-m-ibrahim-1-NEJki-TTu-LU-unsplash.jpg",
+        "service_name": "Nature Hike",
+        "service_description": "Discover the natural beauty of the area with an experienced guide.",
+        "service_provider_img": "https://i.ibb.co/qjLgYTd/harps-joseph-t-Avp-DE7f-Xg-Y-unsplash.jpg",
+        "service_provider_name": "Jane Smith",
+        "service_area": "National Park",
+        "service_price": "$60"
+      },
+      {
+        "_id": "3",
+        "service_img": "https://i.ibb.co/LCBVRk2/oziel-gomez-Ib-LZj-Kcelp-M-unsplash.jpg",
+        "service_name": "Art and Culture Exploration",
+        "service_description": "Sample local cuisine and learn about our food culture from a passionate guide.",
+        "service_provider_img": "https://i.ibb.co/cYK06Xc/christopher-campbell-r-DEOVt-E7v-Os-unsplash.jpg",
+        "service_provider_name": "Michael Johnson",
+        "service_area": "Downtown District",
+        "service_price": "$75"
+      },
+      {
+        "_id": "4",
+        "service_img": "https://i.ibb.co/BrXht2Y/wooden-bridge-koh-nangyuan-island-surat-thani-thailand.jpg",
+        "service_name": "Art Gallery Tour",
+        "service_description": "Immerse yourself in the world of art with a professional guide.",
+        "service_provider_img": "https://i.ibb.co/F4BSjsm/irene-strong-v2a-Knj-Mb-P-k-unsplash.jpg",
+        "service_provider_name": "Emily Davis",
+        "service_area": "Arts District",
+        "service_price": "$65"
+      },
+      {
+        "_id": "5",
+        "service_img": "https://i.ibb.co/0cshB3Z/niloy-biswas-Sr-NR-FUHdb-M-unsplash.jpg",
+        "service_name": "Bike Tour Adventure",
+        "service_description": "Savor a variety of local wines guided by a certified sommelier.",
+        "service_provider_img": "https://i.ibb.co/47g4pQg/elijah-hiett-v-AVGd-V1okl-Q-unsplash.jpg",
+        "service_provider_name": "Sophia Rodriguez",
+        "service_area": "Winery Region",
+        "service_price": "$80"
+      },
+      {
+        "_id": "6",
+        "service_img": "https://i.ibb.co/MDLnQQ2/gyeongbokgung-palace-autumn-south-korea.jpg",
+        "service_name": "Sunset Scenic Tour",
+        "service_description": "Embark on an adrenaline-pumping adventure with our experienced guides.",
+        "service_provider_img": "https://i.ibb.co/0hbbwBM/microsoft-edge-1-N49-Cn7-P0-Fg-unsplash.jpg",
+        "service_provider_name": "David Brown",
+        "service_area": "Mountain Trails",
+        "service_price": "$70"
+      }
+    ]
+  }
+  

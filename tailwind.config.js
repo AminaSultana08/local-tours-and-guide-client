@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors');
 export default {
   darkMode:'class',
   content: [
@@ -7,6 +8,12 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor'
+    
+       
+      },
       fontFamily:{
         
         Signika: 'Signika, sans-serif',
@@ -15,6 +22,7 @@ export default {
       }
     },
   },
+  variants: {},
   plugins: [],
 }
 
