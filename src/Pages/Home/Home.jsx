@@ -3,12 +3,13 @@ import {Helmet} from "react-helmet";
 import Banner from "./Banner/Banner";
 import { Link, useLoaderData } from "react-router-dom";
 import PopularServiceCard from "./PopularServices/PopularServiceCard";
+import { useState } from "react";
 
 
 
 const Home = () => {
     const services = useLoaderData()
-    console.log(services);
+    const [dataLength , setDataLength] = useState(4)
     
     return (
         <div>
@@ -21,13 +22,17 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 items-center justify-center mx-auto px-5 md:px-0 lg:px-0 md:mx-5 lg:mx-60 ">
                 
                 {
-                    services.map(service=><PopularServiceCard
+                    services.slice(0,dataLength).map(service=><PopularServiceCard
                          key={service._id}
                          service={service}
                         ></PopularServiceCard>)
                 }
             </div>
-            <Link to='/services' ><button className="btn btn-primary px-5  py-3 my-10 block w-full">Show All</button></Link>
+           <div className="flex justify-center">
+            <div className={dataLength ===services.length? 'hidden' : ''}>
+            <Link to='/services' ><button onClick={()=>{setDataLength(services.length)}} className="btn    bg-amber-500 font-Playfair font-bold  text-white btn-primary px-5  py-3 my-10 block w-full">Show All</button></Link>
+            </div>
+           </div>
             </div>
             </div>
            

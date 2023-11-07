@@ -47,7 +47,9 @@ const AddServices = () => {
                   })
             }
         })
+        form.reset()
     }
+  
     return (
         <div>
             <Title><h1>Add Service</h1></Title>

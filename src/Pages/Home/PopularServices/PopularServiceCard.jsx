@@ -15,7 +15,13 @@ const PopularServiceCard = ({service} ) => {
                         alt="ui/ux review check"
                     />
                 </div>
-                <div className="p-6">
+                <div className="px-6 py-3 flex justify-center ">
+                    <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        {service?.address}
+                    </h4>
+                  
+                </div>
+                <div className="px-6">
                     <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                         {service?.serviceName}
                     </h4>
@@ -40,7 +46,7 @@ const PopularServiceCard = ({service} ) => {
                        
                     </div>
                     <p className="block font-sans text-base antialiased font-normal leading-relaxed text-inherit">
-                        {service?.price}
+                       ${service?.price}
                     </p>
                     </div>
                    <Link to={`/services/${_id}`}> <button className="btn w-1/2 bg-black dark:bg-white text-white dark:text-black rounded-3xl flex items-center justify-center px-3 py-1 ml-24 mb-3 ">View Details</button></Link>
