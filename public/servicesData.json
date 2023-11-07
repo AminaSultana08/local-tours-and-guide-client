@@ -1,7 +1,6 @@
-{
-    "services": [
+ [
       {
-        "_id": "1",
+        "service_id": "1",
         "service_img": "https://i.ibb.co/9WkL77N/md-naziur-rahman-R-s-U0-S6-GDm4-unsplash.jpg",
         "service_name": "Nature Expedition",
         "service_description": "Explore the rich history of our city with a knowledgeable local guide.",
@@ -11,7 +10,7 @@
         "service_price": "$50"
       },
       {
-        "_id": "2",
+        "service_id": "2",
         "service_img": "https://i.ibb.co/VC2CJfC/s-m-ibrahim-1-NEJki-TTu-LU-unsplash.jpg",
         "service_name": "Nature Hike",
         "service_description": "Discover the natural beauty of the area with an experienced guide.",
@@ -21,7 +20,7 @@
         "service_price": "$60"
       },
       {
-        "_id": "3",
+        "service_id": "3",
         "service_img": "https://i.ibb.co/LCBVRk2/oziel-gomez-Ib-LZj-Kcelp-M-unsplash.jpg",
         "service_name": "Art and Culture Exploration",
         "service_description": "Sample local cuisine and learn about our food culture from a passionate guide.",
@@ -31,7 +30,7 @@
         "service_price": "$75"
       },
       {
-        "_id": "4",
+        "service_id": "4",
         "service_img": "https://i.ibb.co/BrXht2Y/wooden-bridge-koh-nangyuan-island-surat-thani-thailand.jpg",
         "service_name": "Art Gallery Tour",
         "service_description": "Immerse yourself in the world of art with a professional guide.",
@@ -41,7 +40,7 @@
         "service_price": "$65"
       },
       {
-        "_id": "5",
+        "service_id": "5",
         "service_img": "https://i.ibb.co/0cshB3Z/niloy-biswas-Sr-NR-FUHdb-M-unsplash.jpg",
         "service_name": "Bike Tour Adventure",
         "service_description": "Savor a variety of local wines guided by a certified sommelier.",
@@ -51,7 +50,7 @@
         "service_price": "$80"
       },
       {
-        "_id": "6",
+        "service_id": "6",
         "service_img": "https://i.ibb.co/MDLnQQ2/gyeongbokgung-palace-autumn-south-korea.jpg",
         "service_name": "Sunset Scenic Tour",
         "service_description": "Embark on an adrenaline-pumping adventure with our experienced guides.",
@@ -61,5 +60,5 @@
         "service_price": "$70"
       }
     ]
-  }
+  
   

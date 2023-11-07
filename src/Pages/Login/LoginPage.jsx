@@ -2,7 +2,7 @@ import { BsGithub} from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from 'react-router-dom';
 
-const LoginPage = ({handleLogin}) => {
+const LoginPage = ({handleLogin,handleGithubLogin,handleGoogleLogin}) => {
     return (
         <div>
         <div className="bg-slate-800 border text-white border-slate-600  rounded-md mt-20 p-8 shadow-lg backdrop:filter backdrop:blur-lg bg-opacity-30 relative">
@@ -23,8 +23,8 @@ const LoginPage = ({handleLogin}) => {
             </div>
         <h1 className="text-center  border-b my-3 border-zinc-400 text-white text-2xl" >Or</h1>
         <div className="flex gap-5 py-5  justify-center items-center ">
-            <button className="text-3xl"><BsGithub></BsGithub> </button>
-            <button className="text-3xl" type=""><FcGoogle></FcGoogle> </button>
+            <button onClick={handleGithubLogin} className="text-3xl"><BsGithub></BsGithub> </button>
+            <button onClick={handleGoogleLogin} className="text-3xl" type=""><FcGoogle></FcGoogle> </button>
         </div>
             </div>
         </div>

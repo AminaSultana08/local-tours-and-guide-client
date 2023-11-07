@@ -6,7 +6,7 @@ import PopularServices from "./PopularServices/PopularServices";
 const Home = () => {
     return (
         <div>
-        <Helmet><title>🏡Home</title> </Helmet>
+        <Helmet><title>🏡WanderWisdom|Home</title> </Helmet>
     <Banner></Banner>
             
             <PopularServices></PopularServices>

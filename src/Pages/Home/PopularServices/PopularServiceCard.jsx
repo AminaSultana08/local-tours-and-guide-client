@@ -1,10 +1,13 @@
+/* eslint-disable react/prop-types */
+
+import { Link } from "react-router-dom";
 
 
 const PopularServiceCard = ({popularService} ) => {
-    const{service_img,service_name,service_description,service_provider_img,service_provider_name,service_price} = popularService
+    const{_id, service_img,service_name,service_description,service_provider_img,service_provider_name,service_price} = popularService
     return (
         <div>
-            <div className="relative  flex max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md dark:bg-zinc-800 dark:text-white ">
+            <div className="relative  flex max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md dark:bg-zinc-700 dark:text-white ">
                 <div className="relative p-3 rounded-xl m-0 overflow-hidden text-gray-700 bg-transparent  shadow-none bg-clip-border">
                     <img 
                     className="rounded-3xl w-96 h-60"
@@ -40,7 +43,7 @@ const PopularServiceCard = ({popularService} ) => {
                         {service_price}
                     </p>
                     </div>
-                    <button className="btn w-1/2 bg-black dark:bg-white text-white dark:text-black rounded-3xl flex items-center justify-center px-3 py-1 ml-24 mb-3 ">View Details</button>
+                   <Link to={`/services/${_id}`}> <button className="btn w-1/2 bg-black dark:bg-white text-white dark:text-black rounded-3xl flex items-center justify-center px-3 py-1 ml-24 mb-3 ">View Details</button></Link>
             </div>
         </div>
     );
