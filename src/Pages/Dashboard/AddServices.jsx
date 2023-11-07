@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Title from "../../Components/AnimatedText";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 //Picture URL of the Service
 // ○ Service Name,
@@ -19,12 +20,33 @@ const AddServices = () => {
         const serviceName = form.serviceName.value
         const photo = form.photo.value
         const providerName = form.providerName.value
+        const providerPhoto = form.providerPhoto.value
         const email = form.email.value
         const address = form.address.value
         const price = form.price.value
         const description = form.description.value
-      const serviceData = {serviceName,photo,providerName,email,address,price,description}
-        console.log(serviceData);
+      const newService = {serviceName,photo,providerName,providerPhoto,email,address,price,description}
+       // console.log(serviceData);
+
+        fetch('http://localhost:5000/services',{
+            method:'POST',
+            headers:{
+                'content-type': 'application/json'
+            },
+            body:JSON.stringify(newService)
+        })
+        .then(res=>res.json())
+        .then(data =>{
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Service Added Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+            }
+        })
     }
     return (
         <div>
@@ -54,6 +76,10 @@ const AddServices = () => {
                                 <div className="form-control col-span-full sm:col-span-3">
                                     <label className="text-sm">Email</label>
                                     <input  name="email" required  placeholder="Email" className="w-full rounded-md p-2 focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" type="email" defaultValue={user?.email} />
+                                </div>
+                                <div className="form-control col-span-full sm:col-span-3">
+                                    <label className="text-sm">Provider Photo</label>
+                                    <input  name="providerPhoto" required  placeholder="provider photo-url" className="w-full rounded-md p-2 focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" type="url" defaultValue={user?.photo} />
                                 </div>
                                 <div className="form-control col-span-full sm:col-span-2">
                                     <label className="text-sm"> Service Area</label>
