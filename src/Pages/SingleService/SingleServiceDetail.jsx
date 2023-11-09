@@ -7,6 +7,7 @@ import { useLoaderData} from "react-router-dom";
 import Modal from "../../Components/modal";
 import BookServiceForm from "../../Components/BookServiceForm";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 
 
@@ -38,8 +39,28 @@ const handleBookService = e =>{
     const address = form.address.value
     const price = form.price.value
     const date = form.date.value
-  const bookedService = {serviceName,photo,providerName,providerPhoto,email,address,price,date}
-  console.log(bookedService);
+  const booking = {serviceName,photo,providerName,providerPhoto,email,address,price,date}
+  console.log(booking);
+
+  fetch('http://localhost:5000/bookings', {
+    method:'POST',
+    headers:{
+        'content-type':'application/json'
+    },
+    body:JSON.stringify(booking)
+  })
+  .then(res =>res.json())
+  .then(data =>{
+    console.log(data)
+    if(data.insertedId){
+        Swal.fire({
+            title: 'Success!',
+            text: 'Service Booked Successfully',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+          })
+    }
+  })
 }
     
     
