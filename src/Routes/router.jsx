@@ -46,7 +46,9 @@ const router = createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
-            },
+            }
+            
+            
             
         ]
     },
@@ -71,6 +73,7 @@ const router = createBrowserRouter([
                 path:'/dashboard/schedules',
                 element:<PrivateRoute><MySchedules></MySchedules></PrivateRoute>
             },
+            
         ]
     }
 ])
