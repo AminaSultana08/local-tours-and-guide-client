@@ -23,7 +23,7 @@ const SingleServiceDetail = ( ) => {
     const{ _id,serviceName,photo,providerName,providerPhoto,address,price,description}=singleService
     
 useEffect(()=>{
-    fetch('http://localhost:5000/services')
+    fetch('https://local-tours-and-guide-server-lb9ypr0ed-amina-sultana-s-projects.vercel.app/services')
     .then(res=>res.json() )
     .then(data=>{
         setServices(data);
@@ -45,7 +45,7 @@ const handleBookService = e =>{
   const booking = {serviceName,photo,providerName,providerPhoto,email,address,price,date}
   console.log(booking);
 
-  fetch('http://localhost:5000/bookings', {
+  fetch('https://local-tours-and-guide-server-lb9ypr0ed-amina-sultana-s-projects.vercel.app/bookings', {
     method:'POST',
     headers:{
         'content-type':'application/json'

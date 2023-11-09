@@ -25,7 +25,7 @@ const ManageServiceCard = ({service , refetch}) => {
                     if (result.isConfirmed) {
 
                         axios
-                        .delete(`http://localhost:5000/services/${_id}`)
+                        .delete(`https://local-tours-and-guide-server-lb9ypr0ed-amina-sultana-s-projects.vercel.app/services/${_id}`)
                         .then((res) => {
                             if(res?.data.deletedCount>0){
                                    Swal.fire({

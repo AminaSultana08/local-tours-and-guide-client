@@ -27,17 +27,17 @@ const router = createBrowserRouter([
             {
                path:'/',
                element:<Home/>, 
-               loader:()=> fetch('http://localhost:5000/services')
+               loader:()=> fetch('https://local-tours-and-guide-server-lb9ypr0ed-amina-sultana-s-projects.vercel.app/services')
             },
             {
                 path:'/services',
                 element:<Services/>,
-                loader:()=> fetch('http://localhost:5000/services')
+                loader:()=> fetch('https://local-tours-and-guide-server-lb9ypr0ed-amina-sultana-s-projects.vercel.app/services')
             },
             {
                 path:'/services/:id',
                 element:<PrivateRoute><SingleServiceDetail></SingleServiceDetail></PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`) 
+                loader:({params})=>fetch(`https://local-tours-and-guide-server-lb9ypr0ed-amina-sultana-s-projects.vercel.app/services/${params.id}`) 
                
             },
             {
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
             {
                 path:'/dashboard/updateService/:id',
                 element:<PrivateRoute><UpdateService></UpdateService> </PrivateRoute>,
-                loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+                loader:({params})=>fetch(`https://local-tours-and-guide-server-lb9ypr0ed-amina-sultana-s-projects.vercel.app/services/${params.id}`)
                 
                
             },

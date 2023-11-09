@@ -38,7 +38,7 @@ const handleUpdateService=async (e) =>{
 
     }
     console.log(updatedService);
-    const res =await axios.put(`http://localhost:5000/services/${_id}`,updatedService)
+    const res =await axios.put(`https://local-tours-and-guide-server-lb9ypr0ed-amina-sultana-s-projects.vercel.app/services/${_id}`,updatedService)
     const data = await res.data
 
     console.log(data);

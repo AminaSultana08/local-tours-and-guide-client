@@ -4,7 +4,7 @@ const useService = () => {
     const {data,isLoading,isFetching,refetch} = useQuery({
         queryKey: ['service'],
         queryFn: async()=>{
-            const data = await fetch ('http://localhost:5000/services')
+            const data = await fetch ('https://local-tours-and-guide-server-lb9ypr0ed-amina-sultana-s-projects.vercel.app/services')
             return await data.json()
            
     

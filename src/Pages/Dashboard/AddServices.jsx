@@ -28,7 +28,7 @@ const AddServices = () => {
       const newService = {serviceName,photo,providerName,providerPhoto,email,address,price,description}
        // console.log(serviceData);
 
-        fetch('http://localhost:5000/services',{
+        fetch('https://local-tours-and-guide-server-lb9ypr0ed-amina-sultana-s-projects.vercel.app/services',{
             method:'POST',
             headers:{
                 'content-type': 'application/json'
