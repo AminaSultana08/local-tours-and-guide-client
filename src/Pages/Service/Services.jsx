@@ -10,9 +10,8 @@ const Services = () => {
     return (
         <div>
         <Helmet><title>👨‍🔧WanderWisdom|Services</title> </Helmet>
-          <div className=" h-full m-10 p-20 w-full">
-          <h1 className="text-4xl">Services are coming</h1>
-          <h1>all services {services.length} </h1>
+          <div className=" h-full m-10 p-20 w-full  mt-10">
+         
           <div className="grid grid-cols-1 gap-6 items-center justify-center mx-auto px-5 md:px-0 lg:px-0 md:mx-5 lg:mx-80 ">
             
           {

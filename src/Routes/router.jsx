@@ -12,6 +12,7 @@ import Title from "../Components/AnimatedText";
 import MyServices from "../Pages/Dashboard/MyServices";
 import AddServices from "../Pages/Dashboard/AddServices";
 import MySchedules from "../Pages/Dashboard/MySchedules";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -34,8 +35,8 @@ const router = createBrowserRouter([
             },
             {
                 path:'/services/:id',
-                element:<SingleServiceDetail></SingleServiceDetail>,
-                
+                element:<PrivateRoute><SingleServiceDetail></SingleServiceDetail></PrivateRoute>,
+                loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`) 
                
             },
             {
@@ -59,15 +60,16 @@ const router = createBrowserRouter([
             },
             {
                 path:'/dashboard/myService',
-                element:<MyServices></MyServices>
+                element:<PrivateRoute><MyServices></MyServices></PrivateRoute>,
+                loader:()=>fetch('http://localhost:5000/services')
             },
             {
                 path:'/dashboard/addService',
-                element:<AddServices></AddServices>
+                element:<PrivateRoute><AddServices></AddServices></PrivateRoute>
             },
             {
                 path:'/dashboard/schedules',
-                element:<MySchedules></MySchedules>
+                element:<PrivateRoute><MySchedules></MySchedules></PrivateRoute>
             },
         ]
     }

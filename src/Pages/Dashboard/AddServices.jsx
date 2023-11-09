@@ -81,7 +81,7 @@ const AddServices = () => {
                                 </div>
                                 <div className="form-control col-span-full sm:col-span-3">
                                     <label className="text-sm">Provider Photo</label>
-                                    <input  name="providerPhoto" required  placeholder="provider photo-url" className="w-full rounded-md p-2 focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" type="url" defaultValue={user?.photo} />
+                                    <input  name="providerPhoto" required  placeholder="provider photo-url" className="w-full rounded-md p-2 focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" type="url"  />
                                 </div>
                                 <div className="form-control col-span-full sm:col-span-2">
                                     <label className="text-sm"> Service Area</label>

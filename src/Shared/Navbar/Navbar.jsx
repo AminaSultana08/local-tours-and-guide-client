@@ -8,6 +8,7 @@ import { FiMoon, FiSun } from "react-icons/fi";
 import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Logo from "./Logo";
 
 
 const Navbar = () => {
@@ -56,10 +57,8 @@ const Navbar = () => {
         <div className="shadow-md lg:max-w-7xl w-full fixed top-0 z-20 ">
         <div className="md:flex dark:bg-zinc-700 dark:text-white lg:flex items-center  bg-white bg-transparent  py-8 md:px-10 px-7 lg:px-10">
             <div className='w-full cursor-pointer  grid items-center justify-start  '>
-               <h1 className="text-4xl font-bold  flex font-Playpen bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400  text-transparent bg-clip-text"> <span className=" text-5xl text-red-600">L</span>ogo</h1>
-
-              
-            </div>
+            <Logo></Logo>
+             </div>
             <div onClick={()=>setOpen(!open) } className="text-3xl  absolute right-8 top-6 cursor-pointer md:hidden ">
             <ion-icon name={open? 'close':'menu'}></ion-icon> 
           
@@ -72,17 +71,7 @@ const Navbar = () => {
           <div className="w-10 rounded-full flex">
           <img src={user?.photoURL} />
         </div>
-       { /** <div className="flex-col lg:flex md:flex-col">
-        {
-            user? <>
-            <span>{user?.displayName} </span>
-            <span>{user?.photo} </span>
-            <button onClick={handleLogOut}  className="btn">LogOut</button>
-            </>
-            :
-            <Link><button className="bg-indigo-500 text-xl btn-md text-white py-2 px-2 rounded md:ml-8 duration-500 hover:bg-indigo-600" type="">Login</button></Link>
-        }
-        </div> */}
+      
         </label>
           </div>
             <button onClick={changeTheme} className=' btn text-white  dark:bg-white dark:text-red-500 bg-black m-3 rounded-3xl'> {mode=== 'dark'? <FiSun className="text-3xl" ></FiSun> : <FiMoon className="text-3xl"></FiMoon>} </button>
