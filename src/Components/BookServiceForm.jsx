@@ -9,7 +9,7 @@ const BookServiceForm = ({handleBookService,singleService} ) => {
     return (
         <div>
       
-        <section className="p-1 bg-red-200 dark:bg-gray-800 dark:text-gray-50">
+        <section className="p-1 bg-red-200 dark:bg-gray-800 font-Playpen dark:text-gray-50">
         <form onSubmit={handleBookService} className="container  flex flex-col mx-auto space-y-12">
             <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900   justify-center items-center">
 
@@ -62,7 +62,7 @@ const BookServiceForm = ({handleBookService,singleService} ) => {
             
             <div className="flex  justify-center gap-3 mt-6  sm:flex-row">
             <button type="submit" 
-            className="btn absolute bottom-12  rounded-lg text-lg px-2 bg-white hover:bg-amber-500 hover:text-gray-100 text-grey-400">
+            className="btn absolute bottom-12  rounded-lg text-lg px-2 bg-gradient-to-r from-red-500 to-amber-600 hover:from-pink-500 hover:to-yellow-500  hover:text-white  text-white">
             Purchase this Service </button>
            
            

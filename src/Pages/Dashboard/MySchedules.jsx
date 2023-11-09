@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import Title from "../../Components/AnimatedText";
 
 import { AuthContext } from "../../Providers/AuthProvider";
+import BookingCard from "../../Components/BookingCard";
 
 
 
@@ -24,11 +25,13 @@ const MySchedules = () => {
    
     return (
         <div>
-           <Title><h1>My Schedules </h1></Title>
-           <div>
-            <h1> All bookings {bookings.length} </h1>
-            <div>
-               
+           <Title><h1 className="text-amber-600 font-Playpen">My Schedules </h1></Title>
+           <div className="mt-10">
+            
+            <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-3 ml-16  lg:ml-0 md:ml-0 text-amber-600 ">
+               {
+                  bookings.map(booking =><BookingCard key={booking._id} booking={booking} ></BookingCard> )
+               }
             </div>
            </div>
         </div>

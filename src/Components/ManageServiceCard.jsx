@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import Swal from "sweetalert2";
 
 
@@ -9,7 +9,7 @@ const ManageServiceCard = ({service , refetch}) => {
    
     const {_id,serviceName,photo,providerName,providerPhoto,email,address,price,date,description} = service
 
-    const navigate = useNavigate()
+    
 
     const handleDeleteBooking =()=>{
        
@@ -49,7 +49,7 @@ const ManageServiceCard = ({service , refetch}) => {
   
     return (
         <div >
-        <div className="relative  flex max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md dark:bg-zinc-700 dark:text-white ">
+        <div className="relative font-Playpen  flex max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-amber-600 shadow-md dark:bg-zinc-700 dark:text-white ">
                 <div className="relative p-3 rounded-xl m-0 overflow-hidden text-gray-700 bg-transparent  shadow-none bg-clip-border">
                     <img 
                     className="rounded-3xl w-96 h-60"
@@ -81,7 +81,7 @@ const ManageServiceCard = ({service , refetch}) => {
                         />
                         <div
                             data-tooltip="author-1"
-                            className=" whitespace-normal break-words rounded-lg bg-black dark:bg-white dark:text-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none"
+                            className=" whitespace-normal break-words rounded-lg bg-gradient-to-r from-red-500 to-amber-600 hover:from-pink-500 hover:to-yellow-500  dark:bg-white dark:text-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none"
                         >
                            {providerName}
                         </div>
@@ -92,8 +92,8 @@ const ManageServiceCard = ({service , refetch}) => {
                     </p>
                     </div>
                   <div className="flex justify-center items-center gap-5">
-                  <Link to={`/dashboard/updateService/${_id}`}  > <button  className="btn  bg-black dark:bg-white text-white dark:text-black rounded-3xl px-3 py-1  mb-3 ">Update</button></Link>
-                  <button onClick={handleDeleteBooking} className="btn  bg-black dark:bg-white text-white dark:text-black rounded-3xl px-3 py-1 mb-3">Delete</button>
+                  <Link to={`/dashboard/updateService/${_id}`}  > <button  className="btn  bg-gradient-to-r from-red-500 to-amber-600 hover:from-pink-500 hover:to-yellow-500  dark:bg-white text-white dark:text-black rounded-3xl px-3 py-1  mb-3 ">Update</button></Link>
+                  <button onClick={handleDeleteBooking} className="btn bg-gradient-to-r from-red-500 to-amber-600 hover:from-pink-500 hover:to-yellow-500  text-white  rounded-3xl px-3 py-1 mb-3">Delete</button>
                   </div>
             </div>
         </div>

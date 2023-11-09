@@ -50,7 +50,7 @@ const handleUpdateService=async (e) =>{
                         confirmButtonText: 'Cool'
                       })
     }
-    
+    form.reset()
 }
 
 
@@ -58,8 +58,8 @@ const handleUpdateService=async (e) =>{
 
         <div>
         
-        <h1 className="text-4xl text-center mb-8">Update Product</h1>
-        <section className="p-6 bg-red-200 dark:bg-gray-800 dark:text-gray-50">
+        <h1 className="text-4xl text-center text-amber-600 font-bold mb-8">Update Product</h1>
+        <section className="p-6 bg-amber-100 dark:bg-gray-800 text-amber-600">
         <form  onSubmit={handleUpdateService} className="container  flex flex-col mx-auto space-y-12">
             <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900   justify-center items-center">
 
@@ -104,7 +104,7 @@ const handleUpdateService=async (e) =>{
 
                 </div>
             </fieldset>
-            <button type="submit" className="px-4 mt-4 py-2 w-full bg-white dark:text-red-600  hover:bg-amber-500 hover:text-white max-w-2xl mx-auto border rounded-md dark:border-gray-100">Update Service</button>
+            <button type="submit" className="px-4 mt-4 py-2 w-full bg-gradient-to-r from-red-500 to-amber-600 hover:from-pink-500 hover:to-yellow-500  dark:text-red-600 text-white  hover:bg-amber-500 hover:text-white max-w-2xl mx-auto border rounded-md dark:border-gray-100">Update Service</button>
 
         </form>
     </section>

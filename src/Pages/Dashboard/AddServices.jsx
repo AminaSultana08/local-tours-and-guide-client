@@ -52,9 +52,9 @@ const AddServices = () => {
   
     return (
         <div>
-            <Title><h1>Add Service</h1></Title>
+            <Title><h1 className="text-amber-600 font-Playpen">Add Service</h1></Title>
             <div>
-                <section className="p-6 bg-red-200 dark:bg-gray-800 dark:text-gray-50">
+                <section className="p-6 bg-amber-50 dark:bg-gray-800 text-amber-600 dark:text-gray-50">
                     <form onSubmit={handleAddService} className="container  flex flex-col mx-auto space-y-12">
                         <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900   justify-center items-center">
 
@@ -94,12 +94,12 @@ const AddServices = () => {
 
                                 <div className="form-control col-span-full">
                                     <label className="text-sm">Description </label>
-                                    <textarea  name="description"  type="text" placeholder="description" className="w-full rounded-md p-2 focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" />
+                                    <textarea  name="description"  type="text" placeholder="description" className="w-full text-amber-600 rounded-md p-2 focus:ring focus:ri focus:ri dark:border-gray-700 dark:text-gray-900" />
                                 </div>
 
                             </div>
                         </fieldset>
-                        <button type="submit" className="px-4 mt-4 py-2 w-full bg-white dark:text-red-600  max-w-2xl mx-auto border rounded-md dark:border-gray-100">Add Service</button>
+                        <button type="submit" className="px-4 mt-4 py-2 w-full bg-gradient-to-r from-red-500 to-amber-600 hover:from-pink-500 hover:to-yellow-500  dark:text-red-600  max-w-2xl mx-auto border rounded-md text-white dark:border-gray-100">Add Service</button>
 
                     </form>
                 </section>

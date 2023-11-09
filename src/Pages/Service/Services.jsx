@@ -23,7 +23,7 @@ const Services = () => {
           </div>
           <div className="flex justify-center">
           <div className={dataLength ===services.length? 'hidden' : ''}>
-          <button onClick={()=>{setDataLength(services.length)}} className="btn    bg-amber-500 font-Playfair font-bold  text-white btn-primary px-5  py-3 my-10 block w-full">Show All</button>
+          <button onClick={()=>{setDataLength(services.length)}} className="btn    bg-amber-500 font-Playpen rounded-xl font-bold  text-white btn-primary px-5  py-3 my-10 block w-full">Show All</button>
           </div>
          </div>
           </div>

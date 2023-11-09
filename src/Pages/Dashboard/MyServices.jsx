@@ -14,7 +14,7 @@ const MyServices = () => {
     }
     return (
         <div>
-            <Title><h1>Manage Services  {data.length} </h1></Title>
+            <Title><h1 className="text-amber-600 font-Playpen">Manage Services   </h1></Title>
             <div className="mt-5 ml-6 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-3">
                 {
                     data.map((service) =><ManageServiceCard key={service._id} service={service} refetch={refetch}  ></ManageServiceCard>)

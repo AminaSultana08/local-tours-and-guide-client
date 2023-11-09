@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const LoginPage = ({handleLogin,handleGithubLogin,handleGoogleLogin}) => {
     return (
         <div>
-        <div className="bg-slate-800 border text-white border-slate-600  rounded-md mt-20 p-8 shadow-lg backdrop:filter backdrop:blur-lg bg-opacity-30 relative">
+        <div className="bg-slate-800 border font-Playpen text-white border-slate-600  rounded-md mt-20 p-8 shadow-lg backdrop:filter backdrop:blur-lg bg-opacity-30 relative">
         <h1 className='text-4xl mb-6 font-bold text-center' >Login</h1>
             <form onSubmit={handleLogin} >
             <div className="relative my-4">

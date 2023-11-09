@@ -7,9 +7,9 @@ const PopularServiceCard = ({service} ) => {
     const{_id,serviceName,photo,providerName,providerPhoto,address,price,description} = service
     return (
         <div>
-            <div className="relative  flex max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md dark:bg-zinc-700 dark:text-white ">
-                <div className="relative p-3 rounded-xl m-0 overflow-hidden text-gray-700 bg-transparent  shadow-none bg-clip-border">
-                    <img 
+            <div className="relative bg-amber-50  flex max-w-[24rem] flex-col font-Playpen rounded-xl  bg-clip-border text-amber-600 shadow-md dark:bg-zinc-700 dark:text-white ">
+                <div className="relative p-3 rounded-xl m-0  overflow-hidden  bg-transparent  shadow-none bg-clip-border">
+                    <img   
                     className="rounded-3xl w-96 h-60"
                         src={service?.photo}
                         alt="ui/ux review check"
@@ -39,7 +39,7 @@ const PopularServiceCard = ({service} ) => {
                         />
                         <div
                             data-tooltip="author-1"
-                            className=" whitespace-normal break-words rounded-lg bg-black dark:bg-white dark:text-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none"
+                            className=" whitespace-normal break-words rounded-lg  bg-gradient-to-r from-red-500 to-amber-600 hover:from-pink-500 hover:to-yellow-500 py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none"
                         >
                            {service?.providerName}
                         </div>
@@ -49,7 +49,7 @@ const PopularServiceCard = ({service} ) => {
                        ${service?.price}
                     </p>
                     </div>
-                   <Link to={`/services/${_id}`}> <button className="btn w-1/2 bg-black dark:bg-white text-white dark:text-black rounded-3xl flex items-center justify-center px-3 py-1 ml-24 mb-3 ">View Details</button></Link>
+                   <Link to={`/services/${_id}`}> <button className="btn w-1/2 bg-black dark:bg-white text-white dark:text-black rounded-3xl flex items-center justify-center px-3 py-1 ml-24 mb-3 bg-gradient-to-r from-red-500 to-amber-600 hover:from-pink-500 hover:to-yellow-500 ">View Details</button></Link>
             </div>
         </div>
     );

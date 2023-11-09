@@ -44,7 +44,7 @@ const Register = () => {
 
     return (
         <div>
-            <div  className="text-white h-[100vh] flex items-center justify-center bg-cover "
+            <div  className="text-white font-Playpen h-[100vh] flex items-center justify-center bg-cover "
             style={{'backgroundImage':'url(https://i.ibb.co/rpNxhVZ/sant-angelo.jpg) '}}
             >
             <div className="bg-slate-800 border text-white border-slate-600  rounded-md mt-20 p-8 shadow-lg backdrop:filter backdrop:blur-lg bg-opacity-30 relative">

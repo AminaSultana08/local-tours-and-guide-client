@@ -6,7 +6,7 @@ import { useTheme } from "../../hooks/useTheme";
 import { FiMoon, FiSun } from "react-icons/fi";
 
 import { useContext, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Logo from "./Logo";
 
@@ -21,28 +21,28 @@ const Navbar = () => {
 
     }
     let navLinks = <>
-    <li  className="text-xl bg-white dark:bg-zinc-700 mr-8 md:my-0 my-7"  ><NavLink to='/'      className={({ isActive, isPending }) =>
+    <li  className="text-xl bg-white font-Playpen dark:bg-zinc-700 mr-8 md:my-0 my-7"  ><NavLink to='/'      className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "text-amber-500 underline" : ""
               }>Home</NavLink> </li>
    
-    <li className="text-xl mr-8  bg-white dark:bg-zinc-700 md:my-0 my-7"><NavLink to='/services'  className={({ isActive, isPending }) =>
+    <li className="text-xl mr-8  bg-white font-Playpen dark:bg-zinc-700 md:my-0 my-7"><NavLink to='/services'  className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "text-amber-500 underline" : ""
               }  >Services</NavLink> </li>
      {
       user && user?.uid? (
         <>
-        <li className="text-xl mr-8 bg-white dark:bg-zinc-700 md:my-0 my-7"><NavLink to='/dashboard'  className={({ isActive, isPending }) =>
+        <li className="text-xl mr-8 bg-white font-Playpen dark:bg-zinc-700 md:my-0 my-7"><NavLink to='/dashboard'  className={({ isActive, isPending }) =>
         isPending ? "pending" : isActive ? "text-amber-500 underline" : ""
       }   >Dashboard</NavLink> </li>
       <span>{user?.displayName} </span>
       <span>{user?.photo} </span>
-      <button onClick={handleLogOut}  className="btn bg-amber-500 text-white p-2 rounded-md mx-3">LogOut</button>
+      <button onClick={handleLogOut}  className="btn bg-gradient-to-r from-red-500 to-amber-600 hover:from-pink-500 hover:to-yellow-500  text-white p-2 font-Playpen rounded-md mx-3">LogOut</button>
       
 
          </>
       ) : (
-        <> <li className="text-xl mr-8 bg-white dark:bg-zinc-700 md:my-0 my-7"><NavLink to='/login'  className={({ isActive, isPending }) =>
-        isPending ? "pending" : isActive ? "text-amber-500 underline" : ""
+        <> <li className="text-xl mr-8 bg-white font-Playpen dark:bg-zinc-700 md:my-0 my-7"><NavLink to='/login'  className={({ isActive, isPending }) =>
+        isPending ? "pending" : isActive ? "bg-gradient-to-r from-red-500 to-amber-600 hover:from-pink-500 hover:to-yellow-500  underline" : ""
       }   >Login</NavLink> </li> </>
       )
      }
@@ -59,7 +59,7 @@ const Navbar = () => {
             <div className='w-full cursor-pointer  grid items-center justify-start  '>
             <Logo></Logo>
              </div>
-            <div onClick={()=>setOpen(!open) } className="text-3xl  absolute right-8 top-6 cursor-pointer md:hidden ">
+            <div onClick={()=>setOpen(!open) } className="text-3xl font-Playpen absolute right-8 top-6 cursor-pointer md:hidden ">
             <ion-icon name={open? 'close':'menu'}></ion-icon> 
           
             </div>
