@@ -1,16 +1,18 @@
 
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useLoaderData} from "react-router-dom";
 
 import Modal from "../../Components/modal";
 import BookServiceForm from "../../Components/BookServiceForm";
-import { AiOutlineClose } from "react-icons/ai";
+import { AuthContext } from "../../Providers/AuthProvider";
+
 
 
 
 const SingleServiceDetail = ( ) => {
+    const {user} = useContext(AuthContext)
     const [services , setServices] = useState()
     const singleService = useLoaderData()
     const [open , setOpen] = useState(false)
@@ -27,6 +29,17 @@ console.log(services);
 const handleBookService = e =>{
     e.preventDefault()
     console.log('booked');
+    const form = e.target
+    const serviceName = form.serviceName.value
+    const photo = form.photo.value
+    const providerName = form.providerName.value
+    const providerPhoto = form.providerPhoto.value
+    const email = form.email.value
+    const address = form.address.value
+    const price = form.price.value
+    const date = form.date.value
+  const bookedService = {serviceName,photo,providerName,providerPhoto,email,address,price,date}
+  console.log(bookedService);
 }
     
     
@@ -89,7 +102,7 @@ const handleBookService = e =>{
 
                  <Modal open={open} onClose={()=>setOpen(false)}>
                  <div className="flex flex-col max-w-4xl gap-2 p-1  rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100 mt-36">
-                 <BookServiceForm handleBookService={handleBookService}  ></BookServiceForm>
+                 <BookServiceForm handleBookService={handleBookService}  singleService={singleService} ></BookServiceForm>
 	        
 	
 </div>
