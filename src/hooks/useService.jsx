@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query"
 
-const useBooking = () => {
+const useService = () => {
     const {data,isLoading,isFetching,refetch} = useQuery({
-        queryKey: ['booking'],
+        queryKey: ['service'],
         queryFn: async()=>{
-            const data = await fetch ('http://localhost:5000/bookings')
+            const data = await fetch ('http://localhost:5000/services')
             return await data.json()
            
     
@@ -13,4 +13,4 @@ const useBooking = () => {
     return {data,isLoading,isFetching,refetch}
 };
 
-export default useBooking;
+export default useService;

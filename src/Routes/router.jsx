@@ -13,6 +13,7 @@ import MyServices from "../Pages/Dashboard/MyServices";
 import AddServices from "../Pages/Dashboard/AddServices";
 import MySchedules from "../Pages/Dashboard/MySchedules";
 import PrivateRoute from "./PrivateRoute";
+import UpdateService from "../Pages/Dashboard/updateService";
 
 
 
@@ -62,8 +63,15 @@ const router = createBrowserRouter([
             },
             {
                 path:'/dashboard/myService',
-                element:<PrivateRoute><MyServices></MyServices></PrivateRoute>,
-                loader:()=>fetch('http://localhost:5000/services')
+                element:<PrivateRoute><MyServices></MyServices></PrivateRoute>
+               
+            },
+            {
+                path:'/dashboard/updateService/:id',
+                element:<PrivateRoute><UpdateService></UpdateService> </PrivateRoute>,
+                loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+                
+               
             },
             {
                 path:'/dashboard/addService',

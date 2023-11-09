@@ -1,15 +1,18 @@
 import axios from "axios";
-import { Link } from "react-router-dom";
+
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
-const ManageServiceCard = ({booking , refetch}) => {
+const ManageServiceCard = ({service , refetch}) => {
    
-    const {_id,serviceName,photo,providerName,providerPhoto,email,address,price,date,description} = booking
+   
+    const {_id,serviceName,photo,providerName,providerPhoto,email,address,price,date,description} = service
+
+    const navigate = useNavigate()
 
     const handleDeleteBooking =()=>{
-        // axios
-        // .delete(`http://localhost:5000/bookings/${_id}`
+       
                 Swal.fire({
                     title: "Are you sure?",
                     text: "You won't be able to revert this!",
@@ -22,7 +25,7 @@ const ManageServiceCard = ({booking , refetch}) => {
                     if (result.isConfirmed) {
 
                         axios
-                        .delete(`http://localhost:5000/bookings/${_id}`)
+                        .delete(`http://localhost:5000/services/${_id}`)
                         .then((res) => {
                             if(res?.data.deletedCount>0){
                                    Swal.fire({
@@ -30,6 +33,7 @@ const ManageServiceCard = ({booking , refetch}) => {
                                         text: "Your file has been deleted.",
                                         icon: "success"
                                       });
+                                      
                             }
                         })
                     
@@ -42,9 +46,7 @@ const ManageServiceCard = ({booking , refetch}) => {
 
     }
 
-    const handleUpdateBooking=()=>{
-        console.log('updated');
-    }
+  
     return (
         <div >
         <div className="relative  flex max-w-[24rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md dark:bg-zinc-700 dark:text-white ">
@@ -90,7 +92,7 @@ const ManageServiceCard = ({booking , refetch}) => {
                     </p>
                     </div>
                   <div className="flex justify-center items-center gap-5">
-                  <Link > <button onClick={handleUpdateBooking} className="btn  bg-black dark:bg-white text-white dark:text-black rounded-3xl px-3 py-1  mb-3 ">Update</button></Link>
+                  <Link to={`/dashboard/updateService/${_id}`}  > <button  className="btn  bg-black dark:bg-white text-white dark:text-black rounded-3xl px-3 py-1  mb-3 ">Update</button></Link>
                   <button onClick={handleDeleteBooking} className="btn  bg-black dark:bg-white text-white dark:text-black rounded-3xl px-3 py-1 mb-3">Delete</button>
                   </div>
             </div>
