@@ -1,3 +1,4 @@
 # React
 
-## This website is about local tour and guide. 
+# About Local Tour and Guide Website 
+This website is about local tour and guide.There  are dashboard for user and admin. Admin can add services, and manage sevices too. also Update and Delete services if he wants. User can see the homepage were there are few services and if they wanna see all services they can click "Show All" button and this button redirect to "All Services" page.User can see the details of service but user has to login for this,if user is new at this website he/she has to register account .And after login, it will redirect user to "View Details" page, and user can see the service details and book service. For booking there is a Form with  "Purchage The Service"  button  . User has to fill up the form and book the service .User can see the booked service at "My Scadule" page of Dashboard.And  user can also change the website theme dark and light.
